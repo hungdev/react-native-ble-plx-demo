@@ -18,6 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* beebluethTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* beebluethTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		825A33EBF82CF36FC6BFEFB0 /* libPods-beeblueth-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AADC22A42CB896396CCCD50C /* libPods-beeblueth-tvOSTests.a */; };
+		929942F025820758000AB9F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929942EF25820758000AB9F1 /* File.swift */; };
 		B2A95F6E7D3AAA2859B0257D /* libPods-beeblueth-beebluethTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3620ECC85E357D6EBAB51BC1 /* libPods-beeblueth-beebluethTests.a */; };
 		F5D2D91FA89427CC6AA33E24 /* libPods-beeblueth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26A07BFD84B83C99A5788A4 /* libPods-beeblueth.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,8 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = beeblueth/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83B6F6064C9CFEC8B739A38A /* Pods-beeblueth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeblueth.release.xcconfig"; path = "Target Support Files/Pods-beeblueth/Pods-beeblueth.release.xcconfig"; sourceTree = "<group>"; };
 		8DC99DEA4665F97A09F7E0B9 /* Pods-beeblueth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeblueth.debug.xcconfig"; path = "Target Support Files/Pods-beeblueth/Pods-beeblueth.debug.xcconfig"; sourceTree = "<group>"; };
+		929942EE25820758000AB9F1 /* beeblueth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beeblueth-Bridging-Header.h"; sourceTree = "<group>"; };
+		929942EF25820758000AB9F1 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		AADC22A42CB896396CCCD50C /* libPods-beeblueth-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beeblueth-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E589EC0540F94277350F31 /* Pods-beeblueth-beebluethTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeblueth-beebluethTests.release.xcconfig"; path = "Target Support Files/Pods-beeblueth-beebluethTests/Pods-beeblueth-beebluethTests.release.xcconfig"; sourceTree = "<group>"; };
 		C26A07BFD84B83C99A5788A4 /* libPods-beeblueth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beeblueth.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				929942EF25820758000AB9F1 /* File.swift */,
+				929942EE25820758000AB9F1 /* beeblueth-Bridging-Header.h */,
 			);
 			name = beeblueth;
 			sourceTree = "<group>";
@@ -294,7 +299,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = UQR2KL7GD4;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1220;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -569,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				929942F025820758000AB9F1 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 480C602775680A5CAFD5286A /* Pods-beeblueth-beebluethTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -633,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7E589EC0540F94277350F31 /* Pods-beeblueth-beebluethTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = beebluethTests/Info.plist;
@@ -667,6 +675,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = beeblueth;
+				SWIFT_OBJC_BRIDGING_HEADER = "beeblueth-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -690,6 +699,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = beeblueth;
+				SWIFT_OBJC_BRIDGING_HEADER = "beeblueth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
